@@ -6,7 +6,7 @@ CC = gcc
 	objects = beale.o lista.o chaves.o codifica.o decodifica.o
      
 all: beale.o lista.o chaves.o codifica.o decodifica.o
-	$(CC) $(CFLAGS) -o beale beale.o lista.o chaves.o codifica.o decodifica.o
+	$(CC) -o beale beale.o lista.o chaves.o codifica.o decodifica.o
 
 codifica.o: codifica.c
 	$(CC) -c $(CFLAGS) codifica.c
@@ -26,5 +26,7 @@ beale.o: beale.c
 clean:
 	-rm -f $(objects)
 
+purge: clean
+	-rm -f beale
 
 
