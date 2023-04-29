@@ -9,13 +9,13 @@
 #include <string.h>
 
 lista *criaLista() {
-    lista *lista = malloc(sizeof(lista));
-    if (!lista) return NULL;
+    lista *l = malloc(sizeof(lista));
+    if (!l) return NULL;
 
-    lista->cabeca = NULL;
-    lista->numElementos = 0;
+    l->cabeca = NULL;
+    l->numElementos = 0;
 
-    return lista;
+    return l;
 }
 
 int insere(lista *l, int dado) {
@@ -28,6 +28,7 @@ int insere(lista *l, int dado) {
 
     novo->dado = dado;
     novo->prox = NULL;
+    novo->lista = NULL;
 
     if (!l->cabeca) {
         l->cabeca = novo;

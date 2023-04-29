@@ -97,5 +97,6 @@ void decodificar(char* caminhoMensagemCodificada, char* caminhoOutput,
 
     fclose(mensagemCodificada);
     fclose(arquivoDecodificado);
+    listaDeChaves = destroiLista(listaDeChaves);
     return;
 }
