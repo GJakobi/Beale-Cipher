@@ -1,0 +1,22 @@
+Gustavo Friedrich Jakobi GRR 20221253
+
+A estrutura de dados utilizada para armazenar a lista de chaves é uma lista encadeada,
+na qual cada nó pode conter um caractere ou uma posição de um caractere. A struct da lista
+foi definida usando um int para armazenar o dado, podendo representar o caractere ou uma posicao, pois 
+dessa forma é possivel utilizar a mesma struct para armazenar todas as informações.
+Caso o nó da lista aponte para uma outra lista, o int representa um caractere, e a lista
+para qual o nó aponta guarda as posições desse caractere. 
+Caso o nó não aponte para nenhuma lista, ele apenas guarda a posição do caractere.
+
+Para realizar a codificação, primeiramente é criada uma lista de chaves para armazenar as
+informações, após isso, pegamos caractere por caractere da mensagem original, e procuramos esse caractere
+na lista de chaves, e substituímos por uma posição aleatória.
+Caso o caractere seja um espaço, ele é substituído por '-1'.
+Caso seja uma quebra de linha, ele é substituído por '-2'.
+Caso não seja encontrado na lista de chaves, ele é substituído por '-3'.
+
+Para realizar a decodificação, caso seja utilizado um livro cifra, ele passa pela mesma função usada na
+codificação, que cria uma lista de chaves. A partir daí é feito o processo inverso, no qual procuramos cada número
+da mensagem codificada na lista de chaves.
+O mesmo raciocínio é utilizado caso seja utilizado um arquivo de chaves, primeiro é criado uma lista, e passa
+pelo mesmo processo de procurar o número na lista.
